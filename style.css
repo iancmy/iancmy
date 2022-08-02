@@ -172,7 +172,7 @@ a.button:hover{
     margin: 1rem 0;
 }
 
-input, textarea {
+input, textarea, button {
     resize: none;
     border: none;
     display: inline-block;
@@ -192,7 +192,7 @@ textarea {
     height: 5rem;
 }
 
-input.button:hover{
+button.button:hover{
     cursor: pointer;
     background-color: #daa867;
     color:white;

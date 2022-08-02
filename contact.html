@@ -48,11 +48,23 @@
             <input type="email" name="email" placeholder="Email" required/>
             <input type="text" name="subject" placeholder="Subject">
             <textarea name="message" placeholder="Message" required></textarea>
-            <input class="button" type="submit" value="Send"/>
-            <div class="g-recaptcha" data-sitekey="6LefPj0hAAAAADQNbFSnTPg3qPfygwL_m3AyPDTt"></div>
+            <button 
+                type="button"
+                class="button g-recaptcha" 
+                data-sitekey="6LdWSj0hAAAAAK-vmH9jYgH2ZtHLJDC4fEkPC6-2" 
+                data-callback='onSubmit' 
+                data-action='submit'>
+                Send
+            </button>
+            <!-- <input class="button" type="submit" value="Send"/> -->
         </div>  
       </form>
     </div>
   </main>
+  <script>
+    function onSubmit(token) {
+      document.querySelector(".contact-form").submit();
+    }
+  </script>
   </body>
 </html>
