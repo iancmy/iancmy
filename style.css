@@ -198,6 +198,10 @@ input.button:hover{
     color:white;
 }
 
+.g-recaptcha {
+    margin: .25rem 0;
+}
+
 @keyframes wave {
     0%,100% {
       transform: translateY(0)

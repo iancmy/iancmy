@@ -9,3 +9,8 @@ animatedText.forEach(text => {
         text.classList.remove('pop-text-active');
     })
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const recaptcha = document.querySelector('.g-recaptcha');
+    recaptcha.setAttribute("data-theme", "dark");
+});
