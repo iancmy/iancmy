@@ -192,7 +192,7 @@ textarea {
     height: 5rem;
 }
 
-button.button:hover{
+button.form-button:hover{
     cursor: pointer;
     background-color: #daa867;
     color:white;
