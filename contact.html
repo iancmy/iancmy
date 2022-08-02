@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="static/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ian Comaya</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+  <body>
+    
+    <nav class="nav-container">
+      <ul>
+        <li>
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li>
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+            <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+    </nav>
+    <main class="main-container">
+    <div class="content-container">
+      <h2>
+        Let's <span class="orange-gradient-text">talk! </span>
+      </h2>
+      <p class="contact-desc third-width">I'm interested in freelance opportunities, particularly with regards to video editing. I can also consider working on web development, just keep in mind that I don't have a lot of experience.</p>
+      <p class="contact-desc third-width">If you have any other requests or questions, feel free to use the form.</p>
+      <form class="contact-form third-width" accept-charset='UTF-8' action='https://app.formester.com/forms/5041d048-aeac-41cc-8b65-e848d64624aa/submissions' method='POST'>
+        <div class="form-container">
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email" required/>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Message" required></textarea>
+            <input class="button" type="submit" value="Send" class="g-recaptcha" 
+            data-sitekey="reCAPTCHA_site_key" 
+            data-callback='onSubmit' 
+            data-action='submit'/>
+        </div>  
+      </form>
+    </div>
+  </main>
+  <script>
+    function onSubmit(token) {
+      document.querySelector(".contact-form").submit();
+    }
+  </script>
+  </body>
+</html>
