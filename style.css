@@ -165,7 +165,7 @@ a.button:hover{
     color:#202020;
 }
 
-.form-container {
+.contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
