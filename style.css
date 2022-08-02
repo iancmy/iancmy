@@ -192,14 +192,17 @@ textarea {
     height: 5rem;
 }
 
-button.form-button:hover{
+.form-button:hover{
     cursor: pointer;
     background-color: #daa867;
     color:white;
 }
 
-.g-recaptcha {
-    margin: .25rem 0;
+.error-message {
+    color: #f2a238;
+    font-size: .8rem;
+    font-weight: 300;
+    margin: 0.25rem 0;
 }
 
 @keyframes wave {
