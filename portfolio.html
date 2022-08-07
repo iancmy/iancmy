@@ -11,8 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,700,1,-25" />
+    <link href="https://vjs.zencdn.net/7.20.1/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.css">
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="stylesheet" href="./static/css/showreel.css">
+    <link rel="stylesheet" href="./static/css/portfolio.css">
+    <link rel="stylesheet" href="./static/css/player.css">
+    <script defer src="./static/js/index.js"></script>
+    <script defer src="./static/js/videoCarousel.js"></script>
+    <script defer src="./static/js/showreelControls.js"></script>
     <title>Ian Comaya</title>
   </head>
   <body>
@@ -35,11 +43,26 @@
           <a class="nav-link" href="contact.html">Contact</a>
         </li>
     </nav>
-    <main class="main-container">
-    <div class="content-container">
-        <iframe src="https://www.youtube.com/embed/wjiHpzZK-_c?modestbranding=1&rel=0&iv_load_policy=3" width="560" height="315" title="Gentlemen's Club Grooming Services" frameborder="0" allowfullscreen></iframe>
-        
-    </div>
-  </main>
+    <main class="showreel-container">
+      <div class="showreel"><iframe id="player" src="https://player.vimeo.com/video/685092500?h=31fffe50d0&autoplay=1&title=0&byline=0&portrait=0&muted=1" frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen></iframe></div>
+    </main>
+    <section class="portfolio-container">
+      <section class="showreel-foreground">
+        <div class="showreel-info">
+          <p id="showreel-text">Play reel</p>
+          <span id="more-info" class="material-symbols-rounded">play_arrow</span>
+        </div>
+        <div class="showreel-controls">
+          <span id="mute-unmute-button" class="material-symbols-rounded" data-muted="true"
+          data-playing="true">volume_off</span>
+          <span id="fullscreen" class="material-symbols-rounded">fullscreen</span>
+        </div>
+      </section>
+    </section>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="https://vjs.zencdn.net/7.20.1/video.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.min.js"></script>
   </body>
 </html>

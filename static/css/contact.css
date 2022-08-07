@@ -1,0 +1,78 @@
+p.contact-desc {
+    font-size: .8rem;
+    font-weight: 300;
+    margin: 0 0 1rem 0;
+}
+
+a.link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a.link.support {
+    font-weight: 200;
+}
+
+a.link:hover {
+    color: #f2a238;
+}
+
+a.button {
+    display: inline-block;
+    background-color: #202020;
+    color: white;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border: solid white 1px;
+    font-size: .8rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+a.button:hover{
+    background-color: white;
+    color:#202020;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+input, textarea, button {
+    resize: none;
+    border: none;
+    display: inline-block;
+    background-color: #2e2e2e;
+    color: white;
+    margin: 0.25rem 0;
+    padding: 0.75rem 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: .8rem;
+    font-weight: 300;
+    text-decoration: none;
+    cursor: text;
+    transition: all 0.5s ease-in-out;
+}
+
+textarea {
+    height: 5rem;
+}
+
+.form-button:hover{
+    cursor: pointer;
+    background-color: #daa867;
+    color:white;
+}
+
+.error-message {
+    color: #d68821;
+    font-size: .8rem;
+    font-weight: 300;
+    margin: -.10rem 0;
+}
