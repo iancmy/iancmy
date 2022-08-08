@@ -1,264 +1,255 @@
 /* custom netflix theme */ 
-  :root {
-    --main-color: 231, 111, 81;
-    --accent-color: 244, 162, 97;
-    --secondary-color: 42, 157, 143;
-    --secondary-color-dark: 38, 70, 83;
-    --shadow-color: 90, 90, 90;
-  }
+.video-js {
+  font-size: 30px;
+  color: rgb(var(--main-color));
+}
 
-  .video-js {
-    font-size: 30px;
-    color: rgb(var(--main-color));
-  }
+.vjs-big-play-button {
+  display: none;
+}
 
-  .vjs-big-play-button {
-    display: none;
-  }
+.vjs-big-play-button:hover {
+  display: none;
+}
 
-  .vjs-big-play-button:hover {
-    display: none;
-  }
+.thumbnail:hover .vjs-big-play-button {
+  display: none;
+}
 
-  .thumbnail:hover .vjs-big-play-button {
-    display: none;
-  }
+.video-js 
+.vjs-control:not(.custom-block-component,
+.custom-block-component2,
+.vjs-progress-control, 
+.vjs-progress-control > *) {
+  transition: all 0.2s ease-in-out;
+}
 
-  .video-js 
-  .vjs-control:not(.custom-block-component,
-  .custom-block-component2,
-  .vjs-progress-control, 
-  .vjs-progress-control > *) {
-    transition: all 0.2s ease-in-out;
-  }
+.video-js 
+.vjs-control:not(.custom-block-component,
+.custom-block-component2,
+.vjs-progress-control, 
+.vjs-progress-control > *):hover {
+  transform: scale(1.1);
+}
 
-  .video-js 
-  .vjs-control:not(.custom-block-component,
-  .custom-block-component2,
-  .vjs-progress-control, 
-  .vjs-progress-control > *):hover {
-    transform: scale(1.1);
-  }
+.vjs-remaining-time {
+  display: none;
+}
 
-  .vjs-remaining-time {
-    display: none;
-  }
-  
-  .video-js .vjs-control-bar {
-    background-color: transparent;
-    width: auto;
-    z-index: 2;
-  }
+.video-js .vjs-control-bar {
+  background-color: transparent;
+  width: auto;
+  z-index: 2;
+}
 
-  .video-js.vjs-fullscreen .vjs-control-bar {
-    bottom: 0.5em;
-  }
+.video-js.vjs-fullscreen .vjs-control-bar {
+  bottom: 0.5em;
+}
 
-  .video-js .vjs-current-time {
-    display: flex;
-    position: absolute;
-    right: 0.75em;
-    top: -2.5em;
-  }
+.video-js .vjs-current-time {
+  display: flex;
+  position: absolute;
+  right: 0.75em;
+  top: -2.5em;
+}
 
-  .video-js .vjs-current-time-display {
-    text-align: center;
-    font-size: 0.5em;
-  }
+.video-js .vjs-current-time-display {
+  text-align: center;
+  font-size: 0.5em;
+}
 
-  .video-js .vjs-progress-holder {
-    font-size: .175em;
-  }
+.video-js .vjs-progress-holder {
+  font-size: .175em;
+}
 
-  .video-js .vjs-slider-bar {
-    background: rgb(var(--secondary-color));
-    border-radius: 1em;
-  }
+.video-js .vjs-slider-bar {
+  background: rgb(var(--secondary-color));
+  border-radius: 1em;
+}
 
-  .video-js .vjs-volume-level {
-    background: rgb(var(--main-color));
-  }
+.video-js .vjs-volume-level {
+  background: rgb(var(--main-color));
+}
 
-  .video-js .vjs-play-progress {
-    color: rgb(var(--main-color));
-    background: rgb(var(--main-color));
-    font-size: 1.3em;
-  }
-  
-  .video-js .vjs-play-progress::before {
-    transition: width 1s ease-in-out, height 1s ease-in-out;
-    content: "";
-    top: -0.75em;
-    border: 0;
-    background: radial-gradient(rgb(var(--main-color)), 33%, rgb(var(--accent-color)));
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    box-shadow: rgb(var(--shadow-color)) 0 0 2px;
-  }
+.video-js .vjs-play-progress {
+  color: rgb(var(--main-color));
+  background: rgb(var(--main-color));
+  font-size: 1.3em;
+}
 
-  .video-js .vjs-play-progress:hover::before {
-    width: 1.1em;
-    height: 1.1em;
-    border: 2px solid transparent;
-  }
-  
-  .video-js .vjs-progress-control {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 25px;
-    padding: 0 4em 0 0.4em;
-    top: -1.25em;
-    border-radius: 1em;
-    transition: top 150ms linear, opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear, -moz-transform 150ms linear, -o-transform 150ms linear;
-    z-index: 1;
-    opacity: 1;
-  }
+.video-js .vjs-play-progress::before {
+  transition: width 1s ease-in-out, height 1s ease-in-out;
+  content: "";
+  top: -0.75em;
+  border: 0;
+  background: radial-gradient(rgb(var(--accent-color)), 33%, rgb(var(--main-color)));
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  box-shadow: rgb(var(--shadow-color)) 0 0 2px;
+}
 
-  .video-js .vjs-current-time {
-    position: absolute;
-    transition: top 150ms linear, opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear, -moz-transform 150ms linear, -o-transform 150ms linear;
-    z-index: 1;
-    opacity: 1;
-    top: -2.3em;
-  }
+.video-js .vjs-play-progress:hover::before {
+  width: 1.1em;
+  height: 1.1em;
+  border: 2px solid transparent;
+}
 
-  .video-js .vjs-progress-control:hover .vjs-progress-holder {
-    font-size: .45em;
-  }
+.video-js .vjs-progress-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 25px;
+  padding: 0 4em 0 0.4em;
+  top: -1.25em;
+  border-radius: 1em;
+  transition: top 150ms linear, opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear, -moz-transform 150ms linear, -o-transform 150ms linear;
+  z-index: 1;
+  opacity: 1;
+}
 
-  .video-js .vjs-progress-control:hover .vjs-play-progress::before {
-    top: -0.1em;
-    font-size: 0.75rem;
-  }
-  
-  .video-js .vjs-time-tooltip {
-    background: rgb(var(--secondary-color));
-    color: #000000;
-  }
-  
-  .video-js .vjs-play-progress, .video-js .vjs-load-progress {
-    height: 0.7em !important;
-  }
-  
-  .video-js .vjs-progress-holder {
-    width: 100vw;
-    border-radius: 1em;
-    height: 0.9em;
-  }
+.video-js .vjs-current-time {
+  position: absolute;
+  transition: top 150ms linear, opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear, -moz-transform 150ms linear, -o-transform 150ms linear;
+  z-index: 1;
+  opacity: 1;
+  top: -2.3em;
+}
 
-  .video-js .vjs-load-progress {
-    background: rgba(var(--secondary-color-dark), 0.5);
-    border-radius: 1em;
-    height: 0.9em !important;
-  }
+.video-js .vjs-progress-control:hover .vjs-progress-holder {
+  font-size: .45em;
+}
 
-  .video-js .vjs-load-progress div {
-    background: rgba(var(--secondary-color-dark), 0.75);
-    border-radius: 1em;
-    height: 0.9em !important;
-  }
+.video-js .vjs-progress-control:hover .vjs-play-progress::before {
+  top: -0.1em;
+  font-size: 0.75rem;
+}
 
-  /* loading spinner */
+.video-js .vjs-time-tooltip {
+  background: rgb(var(--secondary-color));
+  color: #000000;
+}
 
-  .vjs-loading-spinner {
-    transform: scale(1.5);
-    border: none;
-    opacity: 0;
-    visibility: hidden;
-    animation: vjs-spinner-fade-out 2s linear 1;
-    animation-delay: 2s;
-  }
+.video-js .vjs-play-progress, .video-js .vjs-load-progress {
+  height: 0.7em !important;
+}
 
-  .vjs-loading-spinner::before, .vjs-loading-spinner::after {
-    border: none;
-  }
+.video-js .vjs-progress-holder {
+  width: 100vw;
+  border-radius: 1em;
+  height: 0.9em;
+}
 
-  .vjs-loading-spinner::after {
-    background-image: url(/static/img/site-spinner.png);
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-  }
+.video-js .vjs-load-progress {
+  background: rgba(var(--secondary-color-dark), 0.5);
+  border-radius: 1em;
+  height: 0.9em !important;
+}
 
-  .vjs-seeking .vjs-loading-spinner::after, .vjs-waiting .vjs-loading-spinner::after {
-    animation: vjs-spinner-spin 1.1s linear infinite, vjs-spinner-fade 1.1s linear 1 !important;
-    animation-delay: 2s;
-  }
+.video-js .vjs-load-progress div {
+  background: rgba(var(--secondary-color-dark), 0.75);
+  border-radius: 1em;
+  height: 0.9em !important;
+}
 
-  .vjs-seeking .vjs-loading-spinner, .vjs-waiting .vjs-loading-spinner {
-    opacity: 1;
-    visibility: visible;
-    animation: vjs-spinner-fade-in 2s linear 1;
-    animation-delay: 2s;
-  }
+/* loading spinner */
 
-  /* custom back button */
-  
-  .video-js .custom-back-button {
-    position: fixed;
-    height: 2em;
-    top: 2em;
-    left: 0.5em;
-    cursor: pointer;
-    z-index: 1;
-  }
+.vjs-loading-spinner {
+  transform: scale(1.5);
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  animation: vjs-spinner-fade-out 2s linear 1;
+  animation-delay: 2s;
+}
 
-  .video-js .custom-back-button::after {
-    content: "\0279C";
-    position: absolute;
-    font-size: 2em;
-    top: 0;
-    left: 0.3em;
-    transform: rotate(180deg);
-  }
+.vjs-loading-spinner::before, .vjs-loading-spinner::after {
+  border: none;
+}
 
-  /* block components */
-  .video-js .custom-block-component {
-    width: 100vw;
-    height: 6vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    cursor: default;
-  }
+.vjs-loading-spinner::after {
+  background-image: url(/static/img/site-spinner.png);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
 
-  .video-js .custom-block-component2 {
-    width: 130px;
-    position: absolute;
-    right: 0;
-    transform: translateY(-2em);
-    cursor: default;
-    z-index: 10;
-  }
+.vjs-seeking .vjs-loading-spinner::after, .vjs-waiting .vjs-loading-spinner::after {
+  animation: vjs-spinner-spin 1.1s linear infinite, vjs-spinner-fade 1.1s linear 1 !important;
+  animation-delay: 2s;
+}
 
-  .video-js .vjs-volume-panel:hover .vjs-mouse-display {
-    display: none;
-  }
+.vjs-seeking .vjs-loading-spinner, .vjs-waiting .vjs-loading-spinner {
+  opacity: 1;
+  visibility: visible;
+  animation: vjs-spinner-fade-in 2s linear 1;
+  animation-delay: 2s;
+}
+
+/* custom back button */
+
+.video-js .custom-back-button {
+  position: fixed;
+  height: 2em;
+  top: 2em;
+  left: 0.5em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.video-js .custom-back-button::after {
+  content: "\0279C";
+  position: absolute;
+  font-size: 2em;
+  top: 0;
+  left: 0.3em;
+  transform: rotate(180deg);
+}
+
+/* block components */
+.video-js .custom-block-component {
+  width: 100vw;
+  height: 6vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: default;
+}
+
+.video-js .custom-block-component2 {
+  width: 130px;
+  position: absolute;
+  right: 0;
+  transform: translateY(-2em);
+  cursor: default;
+  z-index: 10;
+}
+
+.video-js .vjs-volume-panel:hover .vjs-mouse-display {
+  display: none;
+}
 
 @keyframes vjs-spinner-fade-in {
-    0% {
-      opacity: 0;
-      visibility: visible;
-    }
-    100% {
-      opacity: 1;
-      visibility: visible;
-    }
+  0% {
+    opacity: 0;
+    visibility: visible;
   }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 @keyframes vjs-spinner-fade-out {
-    0% {
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      opacity: 0;
-      visibility: visible;
-    }
+  0% {
+    opacity: 1;
+    visibility: visible;
   }
-  
+  100% {
+    opacity: 0;
+    visibility: visible;
+  }
+}

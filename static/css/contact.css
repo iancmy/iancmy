@@ -66,13 +66,14 @@ textarea {
 
 .form-button:hover{
     cursor: pointer;
-    background-color: #daa867;
+    background-color: rgb(var(--accent-color));
     color:white;
 }
 
 .error-message {
-    color: #d68821;
+    color: rgb(var(--main-color));
     font-size: .8rem;
     font-weight: 300;
     margin: -.10rem 0;
 }
+
