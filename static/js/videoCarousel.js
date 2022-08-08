@@ -49,7 +49,7 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Paskong Arriba Teaser",
+    "title": "Paskong Arriba MV Teaser",
     "code": "paskong-arriba-teaser",
     "year": 2016,
     "description": "2015, Video Editor, Cinematographer, Music Video, Teaser",
@@ -81,7 +81,7 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Coca Cola",
+    "title": "Coca-Cola",
     "code": "coke",
     "year": 2016,
     "description": "2016, Video Editor, Cinematographer, Advertisement",
@@ -209,7 +209,7 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Death Penalty",
+    "title": "Death Penalty Infovideo",
     "code": "death-penalty",
     "year": 2016,
     "description": "2016, Video Editor, Infovideo",
@@ -273,11 +273,11 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Letran Advertisement",
+    "title": "Letran Advertisement 1",
     "code": "letran-ad1",
     "year": 2017,
     "description": "2017, Video Editor, Cinematographer, Advertisement",
-    "link": "https://youtu.be/h-0aDFbkdSY",
+    "link": "https://youtu.be/OL4RzT0R_jw",
     "thumbnail": "/static/img/posters/letran-ad1.jpg",
     "favorites": false,
     "gaming": false,
@@ -289,11 +289,11 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Letran Advertisement",
+    "title": "Letran Advertisement 2",
     "code": "letran-ad2",
     "year": 2017,
     "description": "2017, Video Editor, Cinematographer, Advertisement",
-    "link": "https://youtu.be/OL4RzT0R_jw",
+    "link": "https://youtu.be/h-0aDFbkdSY",
     "thumbnail": "/static/img/posters/letran-ad2.jpg",
     "favorites": false,
     "gaming": false,
@@ -305,7 +305,7 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Letran's Got Talent",
+    "title": "Letran's Got Talent Teaser",
     "code": "got-talent",
     "year": 2017,
     "description": "2017, Video Editor, Cinematographer, Event, Teaser",
@@ -340,7 +340,7 @@ const portfolio = [
     "title": "Mr. and Ms. SBMA Teaser",
     "code": "mr-and-ms-sbma",
     "year": 2017,
-    "description": "2017, Video Editor, Event, Teaser",
+    "description": "2017, Video Editor, Event, Teaser, Animated",
     "link": "https://youtu.be/a460FSAaPeQ",
     "thumbnail": "/static/img/posters/mr-and-ms-sbma.jpg",
     "favorites": false,
@@ -357,7 +357,7 @@ const portfolio = [
     "code": "onyangs",
     "year": 2017,
     "description": "2017, Video Editor, Cinematographer, Advertisement",
-    "link": "https://youtu.be/a460FSAaPeQ",
+    "link": "https://youtu.be/eatU7OVhJOs",
     "thumbnail": "/static/img/posters/onyangs.jpg",
     "favorites": false,
     "gaming": false,
@@ -369,7 +369,7 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Pnagpala Resto Retro",
+    "title": "PNagpala Resto Retro",
     "code": "pnagpala-retro",
     "year": 2017,
     "description": "2017, Video Editor, Cinematographer, Advertisement, Retro",
@@ -385,7 +385,7 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Pnagpala Resto",
+    "title": "PNagpala Resto",
     "code": "pnagpala",
     "year": 2017,
     "description": "2017, Video Editor, Cinematographer, Advertisement",
@@ -593,7 +593,7 @@ const portfolio = [
     "more": true
   },
   {
-    "title": "Breeze Valorant Gameplay",
+    "title": "Breeze - Valorant Gameplay",
     "code": "domyt",
     "year": 2022,
     "description": "2022, Video Editor, Content Creator, Gameplay, Funny, Valorant, DomYT",
@@ -609,7 +609,7 @@ const portfolio = [
     "more": false
   },
   {
-    "title": "Trillix Whomps Fortress",
+    "title": "Whomps Fortress - Garry's Mod Gameplay",
     "code": "trillix",
     "year": 2022,
     "description": "2022, Video Editor, Gameplay, Funny, Garry's Mod, TrillixDoesYouTube",
