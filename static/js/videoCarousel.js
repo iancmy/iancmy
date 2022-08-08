@@ -1163,32 +1163,32 @@ function onVideoClick(video){
     // create new control bar back button
     const VjsButton = videojs.getComponent('Button');
     const MyBackButton = videojs.extend(VjsButton, {options_: {
-        className: 'vjs-custom-back-button',
+        className: 'custom-block-component',
         },
     });
 
-    videojs.registerComponent('MyBackButton', MyBackButton);
-    controlBar.addChild('MyBackButton');
-
-    controlBar.children()[15].on('click', function(){
-        player.exitFullscreen();
-        player.controls(false);
-        player.hasStarted(false);
-        content.replaceWith(video);
-    });
+    videojs.registerComponent('MyBlockComponent', MyBackButton);
+    controlBar.addChild('MyBlockComponent');
 
     // component to block youtube header
     const MyBlockComponent = videojs.extend(VjsButton, {options_: {
-      className: 'vjs-custom-block-button',
+      className: 'custom-back-button',
       },
     });
 
-    videojs.registerComponent('MyBlockComponent', MyBlockComponent);
-    controlBar.addChild('MyBlockComponent');
+    videojs.registerComponent('CustomBackButton', MyBlockComponent);
+    controlBar.addChild('CustomBackButton');
+
+    videojs.getComponent('CustomBackButton').prototype.handleClick = function(){
+      player.exitFullscreen();
+      player.controls(false);
+      player.hasStarted(false);
+      content.replaceWith(video);
+    }
 
     // component to block time display
     const MyBlockComponent2 = videojs.extend(VjsButton, {options_: {
-      className: 'vjs-custom-block-button2',
+      className: 'custom-block-component2',
       },
     });
 
