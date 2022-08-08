@@ -82,7 +82,6 @@ body{
 
 .nav-link:hover{
     color: rgb(var(--accent-color));
-    text-shadow: 2px 2px 0 rgba(var(--shadow-color), 1);
 }
 
 .nav-link.active{
