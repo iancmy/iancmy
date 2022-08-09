@@ -79,7 +79,7 @@ player.on('fullscreenchange', e => {
         if (volume === 0 && document.fullscreenElement){
             if (document.fullscreenElement.nodeName === 'IFRAME') player.setVolume(0.4);
         } else if (volume > 0 && !document.fullscreenElement){
-            if (document.fullscreenElement.nodeName === 'IFRAME') player.setVolume(0);
+            player.setVolume(0);
         }
     })
 } )
