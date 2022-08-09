@@ -77,9 +77,9 @@ fullscreenButton.addEventListener('click', e => {
 player.on('fullscreenchange', e => {
     player.getVolume().then(volume => {
         if (volume === 0 && document.fullscreenElement){
-            player.setVolume(0.4);
+            if (document.fullscreenElement.nodeName === 'IFRAME') player.setVolume(0.4);
         } else if (volume > 0 && !document.fullscreenElement){
-            player.setVolume(0);
+            if (document.fullscreenElement.nodeName === 'IFRAME') player.setVolume(0);
         }
     })
 } )
