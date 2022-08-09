@@ -988,6 +988,10 @@ portfolio.forEach(item => {
 
 // create carousel for each category
 categories.forEach(category => {
+    //randomize videos in category
+    category.videos.sort(() => Math.random() - 0.5)
+
+    //create carousel container for category
     const mainContainer = document.createElement('div');
 
     // title of category
