@@ -1161,8 +1161,6 @@ function onVideoClick(video){
     });
 
     const controlBar = player.controlBar;
-    console.log(controlBar.children())
-
 
     // create new control bar back button
     const VjsButton = videojs.getComponent('Button');
