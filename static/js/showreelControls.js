@@ -49,14 +49,19 @@ player.on('volumechange', e => {
     
 
 player.on('ended', e => {
-    muteUnmuteButton.innerText = 'replay'
-    muteUnmuteButton.setAttribute('data-playing', 'false');
+    if(document.fullscreenElement) document.exitFullscreen();
     player.unload();
+    player.loadVideo(player.getVideoId());
+
+    setTimeout(() => {
+        muteUnmuteButton.innerText = 'replay'
+        muteUnmuteButton.setAttribute('data-playing', 'false');
+    }, 250);
 })
 
 playButton.addEventListener('click', e => {
     player.requestFullscreen().then(() =>{
-        player.setVolume(0.4);
+        if(player.getVolume() === 0) player.setVolume(0.4)
         player.setCurrentTime(0);
         player.play();
     })
@@ -67,3 +72,15 @@ fullscreenButton.addEventListener('click', e => {
         player.play();
     })
 } )
+
+// fullscreen change event listener set volume
+player.on('fullscreenchange', e => {
+    player.getVolume().then(volume => {
+        if (volume === 0 && document.fullscreenElement){
+            player.setVolume(0.4);
+        } else if (volume > 0 && !document.fullscreenElement){
+            player.setVolume(0);
+        }
+    })
+} )
+
