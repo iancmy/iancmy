@@ -1,5 +1,5 @@
 :root {
-    --nav-height: 2.5rem;
+    --nav-height: 3rem;
     --main-color: 231, 111, 81;
     --text-color: 233, 196, 106;
     --accent-color: 244, 162, 97;
@@ -44,13 +44,16 @@ body{
     right: 0;
     bottom: 0;
     z-index: 10;
-    /* gradient background */
-    background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.10) 100%);
+    background: linear-gradient(180deg, rgba(var(--background-color),0.45) 0%, rgba(var(--background-color),0.10) 100%);
     transition: background-color 0.5s ease-in-out;
 }
 
-.nav-container:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+.nav-container:not(.opaque):hover{
+    background-color: rgba(var(--background-color), 0.5);
+}
+
+.opaque {
+    background-color: rgba(var(--background-color), 1);
 }
 
 .nav-container > ul {
@@ -62,8 +65,7 @@ body{
 
 .nav-logo {
     margin: 0.4rem 1rem 0 1rem;
-    height: calc(var(--logo-size) * 0.3);
-    width: calc(--logo-size * 0.6);
+    height: calc(var(--logo-size) * 0.35);
 }
 
 .nav-container > ul > li {
