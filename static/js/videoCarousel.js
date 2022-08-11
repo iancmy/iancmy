@@ -1249,7 +1249,17 @@ function onVideoClick(video){
     });
 }
 
+// set height for container
+(function setHeight(){
+    const root = document.querySelector(':root');
+    const container = document.querySelector('.thumbnail-container');
+    const width = getComputedStyle(container).getPropertyValue('width');
+    const computedHeight = parseFloat(width) * 9 / 16;
 
+    console.log({width, computedHeight});
+
+    root.style.setProperty('--thumbnail-height', computedHeight + 'px');
+})();
 
 
 

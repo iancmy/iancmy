@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(var(--secondary-color-dark),0) 0%, rgba(var(--secondary-color-dark),0.1) 31%, rgba(var(--secondary-color-dark),0.2) 57%, rgba(var(--secondary-color),0.3) 77%, rgba(var(--secondary-color),0.4) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 25%, rgba(var(--background-color),0.5) 50%, rgba(var(--background-color),0.85) 100%);
     overflow: hidden;
     z-index: 2;
 }
@@ -39,6 +39,13 @@
     margin-bottom: 1rem;
 }
 
+.showreel-foreground .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .showreel-info {
     display: flex;
     flex-direction: row;
@@ -53,7 +60,7 @@
 }
 
 #showreel-text {
-    font-size: 4rem;
+    font-size: 1.75rem;
     font-weight: 500;
     margin-left: 3rem;
     transition: all 0.25s ease-in-out;
@@ -61,10 +68,23 @@
 
 #more-info {
     margin-top: 0.25rem;
-    font-size: 5rem;
+    font-size: 1.75rem;
     opacity: 0;
     transform: translateX(-0.25rem);
     transition: all 0.25s ease-in-out;
+}
+
+#open-reel {
+    margin-left: 3rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: rgba(var(--secondary-color-dark), 0.5);
+    transition: all 0.25s ease-in-out;
+}
+
+#open-reel:hover,
+#open-reel:focus {
+    background-color: rgba(var(--secondary-color-dark), 0.3);
 }
 
 .showreel-info:hover > #more-info {
