@@ -1,0 +1,113 @@
+/* NAV BAR */
+@media (max-width: 768px) {
+    .nav-container .nav-link {
+        display: none;
+    }
+
+    .nav-container {
+        width: 100vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-container .nav-button {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-container .nav-button span {
+        font-size: 1.5rem;
+    }
+
+    .overlay-nav {
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        display: block;
+        padding-top: var(--nav-height);
+        background: rgba(var(--background-color), 0.9);
+        transform: translateY(-100%);
+        transition: all 0.4s ease-in-out;
+        z-index: 10;
+    }
+
+    .overlay-nav ul {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        list-style: none;
+    }
+
+    .overlay-nav li {
+        margin-bottom: 0.5rem;
+    }
+
+    .overlay-nav a:not(.active) {
+        font-weight: 400;
+    }
+
+    .overlay-nav a {
+        font-size: 1.25rem;
+    }
+
+    .overlay-nav.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* CONTENT */
+@media (max-width: 1200px) {
+    .content-text {
+        width: calc(100vw/2);
+    }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+    .content-text {
+        width: calc(100vw/1.25);
+        margin: 0 2rem 0 0;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --logo-size: 2.5rem;
+    }
+
+    .content-container {
+        margin: 0 0 0 2.5rem;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    .nav-logo {
+        margin: 0;
+    }
+
+    .pop-container .pop-text {
+        margin: 0 -0.4rem;
+    }
+
+    .gray-text {
+        font-size: 0.9rem;
+    }
+
+    .content-text {
+        width: calc(100vw/1.25);
+        margin: 0 2rem 0 0;
+    }
+}

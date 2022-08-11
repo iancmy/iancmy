@@ -1155,10 +1155,17 @@ function onVideoClick(video){
     };
 
     const player = videojs(content, options);
+
     player.seekButtons({
       forward: 5,
       back: 5,
     });
+
+    if(window.matchMedia("(max-width: 768px)").matches){
+      player.zoomrotate({
+        rotate: 90,
+      })
+    }
 
     const controlBar = player.controlBar;
 
@@ -1255,10 +1262,15 @@ function onVideoClick(video){
     const container = document.querySelector('.thumbnail-container');
     const width = getComputedStyle(container).getPropertyValue('width');
     const computedHeight = parseFloat(width) * 9 / 16;
+    const portraitHeight = parseFloat(width) * 16 / 9;
 
     console.log({width, computedHeight});
 
-    root.style.setProperty('--thumbnail-height', computedHeight + 'px');
+    if (!window.matchMedia('(max-width: 768px)').matches) {
+      root.style.setProperty('--thumbnail-height', computedHeight + 'px'); 
+    } else {
+      root.style.setProperty('--thumbnail-height', portraitHeight + 'px');
+    }
 })();
 
 

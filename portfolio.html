@@ -11,65 +11,127 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,700,1,-25" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,700,1,-25"
+    />
     <link href="https://vjs.zencdn.net/7.20.1/video-js.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.css">
-    <link rel="stylesheet" href="./static/css/main.css" />
-    <link rel="stylesheet" href="./static/css/showreel.css">
-    <link rel="stylesheet" href="./static/css/portfolio.css">
-    <link rel="stylesheet" href="./static/css/player.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.css"
+    />
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <link rel="stylesheet" href="/static/css/mediaQueries.css" />
+    <link rel="stylesheet" href="/static/css/showreel.css" />
+    <link rel="stylesheet" href="/static/css/portfolio.css" />
+    <link rel="stylesheet" href="/static/css/player.css" />
 
     <title>Ian Comaya</title>
 
-    <script defer src="./static/js/main.js"></script>
-    <script defer src="./static/js/videoCarousel.js"></script>
-    <script defer src="./static/js/showreelControls.js"></script>
+    <script defer src="/static/js/main.js"></script>
+    <script defer src="/static/js/videoCarousel.js"></script>
+    <script defer src="/static/js/showreelControls.js"></script>
+    <script defer src="/static/js/mediaQueries.js"></script>
   </head>
   <body>
-    <nav class="nav-container">
-      <a href="/"><img class="nav-logo" src="./static/img/nav-logo.png" alt="logo"></a>
+    <nav class="overlay-nav">
       <ul>
         <li>
-          <a id="nav-home" class="nav-link" href="/">
-            Home
-          </a>
+          <a id="nav-home" class="nav-link" href="/"> Home </a>
         </li>
         <li>
           <a id="nav-about" class="nav-link" href="/about">About</a>
         </li>
         <li>
-          <a id="nav-portfolio" class="nav-link active" href="/portfolio">Portfolio</a>
+          <a id="nav-portfolio" class="nav-link active" href="/portfolio"
+            >Portfolio</a
+          >
         </li>
         <li>
           <a id="nav-projects" class="nav-link" href="/projects">Projects</a>
-      </li>
+        </li>
         <li>
           <a id="nav-contact" class="nav-link" href="/contact">Contact</a>
         </li>
+      </ul>
+    </nav>
+    <nav class="nav-container">
+      <a href="/"
+        ><img class="nav-logo" src="/static/img/nav-logo.png" alt="logo"
+      /></a>
+      <ul>
+        <li>
+          <a id="nav-home" class="nav-link" href="/"> Home </a>
+        </li>
+        <li>
+          <a id="nav-about" class="nav-link" href="/about">About</a>
+        </li>
+        <li>
+          <a id="nav-portfolio" class="nav-link active" href="/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a id="nav-projects" class="nav-link" href="/projects">Projects</a>
+        </li>
+        <li>
+          <a id="nav-contact" class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+      <div class="nav-button">
+        <span class="material-symbols-rounded">menu</span>
+      </div>
     </nav>
     <main class="showreel-container">
-      <div class="showreel"><iframe id="player" src="https://player.vimeo.com/video/685092500?h=31fffe50d0&autoplay=1&title=0&byline=0&portrait=0&muted=1" frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="showreel">
+        <iframe
+          id="player"
+          src="https://player.vimeo.com/video/685092500?h=31fffe50d0&autoplay=1&title=0&byline=0&portrait=0&muted=1"
+          frameborder="0"
+          allow="autoplay; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </main>
     <section class="portfolio-container">
       <section class="showreel-foreground">
         <div class="container">
           <div class="showreel-info">
-            <p id="showreel-text">Play</p>
-            <span id="more-info" class="material-symbols-rounded">play_arrow</span>
+            <p id="showreel-text">Play showreel</p>
+            <span id="more-info" class="material-symbols-rounded"
+              >play_arrow</span
+            >
           </div>
-          <a class="button" id="open-reel" target="_blank" href="https://vimeo.com/iancmy/showreel">View link</a>
-        </div> 
+          <a
+            class="button"
+            id="open-reel"
+            target="_blank"
+            href="https://vimeo.com/iancmy/showreel"
+            >View link</a
+          >
+        </div>
         <div class="showreel-controls">
-          <span id="mute-unmute-button" class="material-symbols-rounded" data-muted="true"
-          data-playing="true">volume_off</span>
-          <span id="fullscreen" class="material-symbols-rounded">fullscreen</span>
+          <span
+            id="mute-unmute-button"
+            class="material-symbols-rounded"
+            data-muted="true"
+            data-playing="true"
+            >volume_off</span
+          >
+          <span id="fullscreen" class="material-symbols-rounded"
+            >fullscreen</span
+          >
         </div>
       </section>
     </section>
 
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="https://vjs.zencdn.net/7.20.1/video.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.min.js"></script>
+    <script src="/static/js/videojs.zoomrotate.js"></script>
   </body>
 </html>

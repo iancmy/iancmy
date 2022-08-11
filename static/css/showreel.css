@@ -75,10 +75,12 @@
 }
 
 #open-reel {
+    align-self: flex-start;
     margin-left: 3rem;
     border: none;
     border-radius: 0.25rem;
     background-color: rgba(var(--secondary-color-dark), 0.5);
+    text-shadow: 2px 2px 2px rgb(var(--secondary-color));
     transition: all 0.25s ease-in-out;
 }
 
@@ -105,7 +107,8 @@
     transition: all 0.25s ease-in-out;
 }
 
-.showreel-info:hover, 
-.showreel-controls > span:hover {
+.showreel-info:hover,
+#open-reel:hover,
+.showreel-controls > span:hover{
     text-shadow: -2px -2px 10px rgb(var(--shadow-color));
 }

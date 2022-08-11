@@ -48,12 +48,20 @@ body{
     transition: background-color 0.5s ease-in-out;
 }
 
+.overlay-nav {
+    display: none;
+}
+
 .nav-container:not(.opaque):hover{
     background-color: rgba(var(--background-color), 0.5);
 }
 
 .opaque {
     background-color: rgba(var(--background-color), 1);
+}
+
+.nav-container .nav-button {
+    display: none;
 }
 
 .nav-container > ul {
@@ -156,14 +164,11 @@ span.pop-text.pop-text-active {
 
 .content-text {
     font-weight: 200;
+    width: calc(100% / 3);
 }
 
 .half-width {
     width: 50%;
-}
-
-.third-width {
-    width: calc(100% / 3);
 }
 
 a.link {
