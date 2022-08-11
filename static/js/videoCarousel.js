@@ -1162,9 +1162,7 @@ function onVideoClick(video){
     });
 
     if(window.matchMedia("(max-width: 768px)").matches){
-      player.zoomrotate({
-        rotate: 90,
-      })
+      player.landscapeFullscreen();
     }
 
     const controlBar = player.controlBar;
