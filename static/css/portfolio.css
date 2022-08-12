@@ -283,6 +283,10 @@
         --items-per-row: 3;
     }
 
+    .portfolio-container {
+        transform: translateY(-4rem);
+    }
+
     .portfolio-container h3 {
         margin-left: 1.75rem;
     }
