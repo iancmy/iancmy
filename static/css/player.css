@@ -253,3 +253,32 @@
     visibility: visible;
   }
 }
+
+@media (max-width: 1080px) {
+  .video-js {
+    font-size: 15px;
+  }
+
+  .video-js .vjs-play-progress::before {
+    transition: width 1s ease-in-out, height 1s ease-in-out;
+    content: "";
+    top: -1.4em;
+    border: 0;
+    background: radial-gradient(rgb(var(--accent-color)), 33%, rgb(var(--main-color)));
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    box-shadow: rgb(var(--shadow-color)) 0 0 2px;
+  }
+
+  .video-js .vjs-current-time {
+    z-index: 1;
+    opacity: 1;
+    font-size: 1.25em;
+    top: -1.9em;
+  }
+
+  .video-js .custom-back-button {
+    top: 1em;
+  }
+}

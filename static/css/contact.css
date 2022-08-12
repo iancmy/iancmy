@@ -103,6 +103,10 @@ textarea {
     .content-container {
         width: calc(100vw/1.25);
     }
+
+    .overlay-nav.active {
+        top: 0;
+    }
 }
 
 @media (max-width: 576px) {
